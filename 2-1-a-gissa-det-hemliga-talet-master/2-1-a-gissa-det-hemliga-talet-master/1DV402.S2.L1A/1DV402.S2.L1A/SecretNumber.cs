@@ -32,13 +32,6 @@ namespace _1DV402.S2.L1A
             Initialize();
         }
 
-        //public SecretNumber(int count, int number, int MaxNumberOfGuesses)
-        //{
-        //    Count = count;
-        //    Number = number;
-        //    Initialize();
-        //}
-
         public void Initialize()
         {
             Random rnd = new Random();
@@ -75,55 +68,14 @@ namespace _1DV402.S2.L1A
 
             if (number == Number)
             {
-                Console.WriteLine("Rätt gissat! Du använde {0} gissningar", Count);
+                Console.WriteLine("Rätt gissat! Du använde {0} gissningar.", Count);
                 return true;
             }
 
             return true;
+            //Fråga om den sista return true;
         }
 
-
-    
-
-
-
-
-        //public bool MakeGuess(int number);
-        //{            
-        //    if (Count == MaxNumberOfGuesses)
-        //    {
-        //        Console.WriteLine("Du har inga gissningar kvar, det hemliga talet var {0}", Number);
-        //        return true;
-        //    }
-
-        //    if (Count != MaxNumberOfGuesses)
-        //    {
-        //        Count++;
-        //    }
-
-        //    if (number == Number)
-        //    {
-        //        Console.WriteLine("Du gissade rätt! Det hemliga talet är {0}. Du använde {1} antal gissningar.", Number, Count);
-        //        count++;
-        //        return true;
-        //    }
-
-        //    if (1 > number || number > 100)
-        //    {
-        //        throw new ArgumentOutOfRangeException();
-        //    }
-        //}
-
-        //public int Count ()
-        //{
-        //    Initialize();
-        //}
-
-        //public int Number()
-        //{
-        //    get {return _number;}
-        //    set {_number = value;}
-        //}
 
     }
  
