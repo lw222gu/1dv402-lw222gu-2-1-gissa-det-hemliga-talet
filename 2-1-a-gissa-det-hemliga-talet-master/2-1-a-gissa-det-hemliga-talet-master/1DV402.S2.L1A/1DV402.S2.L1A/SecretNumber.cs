@@ -54,17 +54,6 @@ namespace _1DV402.S2.L1A
                 throw new ArgumentOutOfRangeException();
             }
 
-            if (number < Number)
-            {
-                Console.WriteLine("{0} är för lågt. Du har {1} gissningar kvar.", number, (MaxNumberOfGuesses - Count));
-                return false;
-            }
-
-            if (number > Number)
-            {
-                Console.WriteLine("{0} är för högt. Du har {1} gissningar kvar.", number, (MaxNumberOfGuesses - Count));
-                return false;
-            }
 
             if (number == Number)
             {
@@ -72,8 +61,22 @@ namespace _1DV402.S2.L1A
                 return true;
             }
 
-            return true;
-            //Fråga om den sista return true;
+            else if (number < Number)
+            {
+                Console.WriteLine("{0} är för lågt. Du har {1} gissningar kvar.", number, (MaxNumberOfGuesses - Count));
+            }
+
+            else if (number > Number)
+            {
+                Console.WriteLine("{0} är för högt. Du har {1} gissningar kvar.", number, (MaxNumberOfGuesses - Count));
+            }
+
+            if (Count == MaxNumberOfGuesses)
+            {
+                Console.WriteLine("Det hemliga talet är {0}", Number);
+            }
+
+            return false;
         }
 
 
